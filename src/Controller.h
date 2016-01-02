@@ -16,6 +16,7 @@
 
 #include "events.h"
 #include "callbacks.h"
+#include "SearchCriteriaModel.h"
 
 class ToolBarGroup;
 class SearchCriteriaGroup;
@@ -31,6 +32,7 @@ private:
     ToolBarGroup&_toolBar;
     SearchCriteriaGroup& _searchCriteria; 
     ResultGroup& _result; 
+    SearchCriteriaModel _searchModel;
 };
 
 #endif /* CONTROLLER_H */

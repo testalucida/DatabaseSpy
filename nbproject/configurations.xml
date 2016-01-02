@@ -5,6 +5,10 @@
                    displayName="Source Files"
                    projectFiles="true">
       <logicalFolder name="src" displayName="src" projectFiles="true">
+        <logicalFolder name="f1" displayName="models" projectFiles="true">
+          <itemPath>/home/max/cpp/fltk/DatabaseSpy/src/SearchCriteriaModel.cpp</itemPath>
+          <itemPath>/home/max/cpp/fltk/DatabaseSpy/src/SearchCriteriaModel.h</itemPath>
+        </logicalFolder>
         <itemPath>/home/max/cpp/fltk/DatabaseSpy/src/Controller.cpp</itemPath>
         <itemPath>/home/max/cpp/fltk/DatabaseSpy/src/Controller.h</itemPath>
         <itemPath>/home/max/cpp/fltk/DatabaseSpy/src/ResultGroup.cpp</itemPath>
@@ -100,6 +104,16 @@
             tool="3"
             flavor2="0">
       </item>
+      <item path="/home/max/cpp/fltk/DatabaseSpy/src/SearchCriteriaModel.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="/home/max/cpp/fltk/DatabaseSpy/src/SearchCriteriaModel.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
       <item path="/home/max/cpp/fltk/DatabaseSpy/src/ToolBarGroup.cpp"
             ex="false"
             tool="1"
@@ -189,6 +203,16 @@
             flavor2="0">
       </item>
       <item path="/home/max/cpp/fltk/DatabaseSpy/src/SearchCriteriaGroup.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="/home/max/cpp/fltk/DatabaseSpy/src/SearchCriteriaModel.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="/home/max/cpp/fltk/DatabaseSpy/src/SearchCriteriaModel.h"
             ex="false"
             tool="3"
             flavor2="0">

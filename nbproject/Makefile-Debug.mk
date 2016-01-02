@@ -38,6 +38,7 @@ OBJECTFILES= \
 	${OBJECTDIR}/_ext/635d88bc/Controller.o \
 	${OBJECTDIR}/_ext/635d88bc/ResultGroup.o \
 	${OBJECTDIR}/_ext/635d88bc/SearchCriteriaGroup.o \
+	${OBJECTDIR}/_ext/635d88bc/SearchCriteriaModel.o \
 	${OBJECTDIR}/_ext/635d88bc/ToolBarGroup.o \
 	${OBJECTDIR}/_ext/635d88bc/main.o
 
@@ -80,6 +81,11 @@ ${OBJECTDIR}/_ext/635d88bc/SearchCriteriaGroup.o: /home/max/cpp/fltk/DatabaseSpy
 	${MKDIR} -p ${OBJECTDIR}/_ext/635d88bc
 	${RM} "$@.d"
 	$(COMPILE.cc) -g -I/home/max/cpp/My_1_5 -I/home/max/cpp/fltk/Flx_1 -I/home/max/cpp/fltk-1.3.2 -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/635d88bc/SearchCriteriaGroup.o /home/max/cpp/fltk/DatabaseSpy/src/SearchCriteriaGroup.cpp
+
+${OBJECTDIR}/_ext/635d88bc/SearchCriteriaModel.o: /home/max/cpp/fltk/DatabaseSpy/src/SearchCriteriaModel.cpp 
+	${MKDIR} -p ${OBJECTDIR}/_ext/635d88bc
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -I/home/max/cpp/My_1_5 -I/home/max/cpp/fltk/Flx_1 -I/home/max/cpp/fltk-1.3.2 -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/635d88bc/SearchCriteriaModel.o /home/max/cpp/fltk/DatabaseSpy/src/SearchCriteriaModel.cpp
 
 ${OBJECTDIR}/_ext/635d88bc/ToolBarGroup.o: /home/max/cpp/fltk/DatabaseSpy/src/ToolBarGroup.cpp 
 	${MKDIR} -p ${OBJECTDIR}/_ext/635d88bc

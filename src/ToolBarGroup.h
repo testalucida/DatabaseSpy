@@ -19,7 +19,7 @@
 #include "callbacks.h"
 
 class Fl_Button;
-
+class Fl_Toggle_Button;
 
 
 class ToolBarGroup : public Fl_Group {
@@ -27,8 +27,9 @@ public:
     ToolBarGroup( int x, int y, int w, Fl_Color color );
     static int getPreferredHeight() { return 40; }
     void callback( ToolBarCallback, void * );
+    void activate( Event e, bool active );
 private:
-    Fl_Button* createButton( int x, const char **xpm, const char **xpm_deact, const char *tooltip );
+    Fl_Button* createButton( int x, const char **xpm, const char **xpm_deact, const char *tooltip, bool toggle = false );
     static void staticOnAction( Fl_Widget *, void * );
     void onAction( Fl_Button * );
 private:
@@ -36,7 +37,7 @@ private:
     void *_pUserData;
     Fl_Button *_pStartBtn;
     Fl_Button *_pTransBtn;
-    Fl_Button *_pFilterBtn;
+    Fl_Toggle_Button *_pFilterBtn;
     
 };
 

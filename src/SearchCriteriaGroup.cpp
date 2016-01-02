@@ -7,19 +7,25 @@
  */
 
 #include "SearchCriteriaGroup.h"
+
 #include <FL/Fl_Input_Choice.H>
 #include <FL/Fl_Int_Input.H>
 #include <FL/Fl_Input.H>
 #include <FL/Fl_Button.H>
 #include <FL/Fl_Pixmap.H>
-#include <flx/Flx_Calendar.h>
 #include "../images/calendar.xpm"
+#include "SearchCriteriaModel.h"
+
+#include <flx/Flx_Calendar.h>
 
 #include <my/datetime.h>
 
+#include <vector>
+#include <string>
 
 using namespace flx;
 using namespace my;
+using namespace std;
 
 SearchCriteriaGroup::SearchCriteriaGroup( int x, int y, int w ) 
 : Fl_Group( x, y, w, 80 )
@@ -76,4 +82,21 @@ void SearchCriteriaGroup::onShowCalendarStatic( Fl_Widget*, void *pThis ) {
     ((SearchCriteriaGroup*)pThis)->onShowCalendar();
 }
 
+void SearchCriteriaGroup::setModel( SearchCriteriaModel &model ) {
+    _pModel = &model;
+    
+    //Tabellen-Combo füllen:
+    vector<string> v2tables = _pModel->getV2Tables();
+    for_each( v2tables.begin(), v2tables.end(), [&] ( string &table ) {
+        _pTableCombo->add( table.c_str() );
+    } );
+    if( !v2tables.empty() ) {
+        _pTableCombo->value( 0 );
+    }
+    
+    //Index-Combo füllen:
+    
+    //Suchdatum einstellen:
+    _pSearchFrom->value( _pModel->getSearchFrom().ToIsoString().c_str() );
+}
 
