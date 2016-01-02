@@ -34,14 +34,17 @@ SearchCriteriaGroup::SearchCriteriaGroup( int x, int y, int w )
                                          YTOP, W_COMBO, 
                                          H_WIDG, 
                                          "Suchen über Spalte: " );
+    _pColumnCombo->tooltip( "Keine Angabe: Selektion aller Änderungen ab Suchdatum" );
     _pColumnValue = new Fl_Int_Input( _pColumnCombo->x(), 
                                       _pColumnCombo->y() + _pColumnCombo->h() + YSPACE, 
                                       W_COMBO - 22, H_WIDG, 
                                       "Spaltenwert: " );
+    _pColumnValue->tooltip( "Mussfeld, wenn Suchspalte angegeben" );
     _pSearchFrom = new Fl_Input( _pColumnCombo->x() + _pColumnCombo->w() + 108,
                                  _pColumnCombo->y(),
                                  100, H_WIDG,
                                  "Suchen ab: " );
+    _pSearchFrom->tooltip( "Datum, ab dem Änderungen selektiert werden (0 Uhr)" );
     _pOpenCalendarBtn = new Fl_Button( _pSearchFrom->x() + _pSearchFrom->w() + XSPACE,
                                        _pSearchFrom->y(),
                                         _pSearchFrom->h(),
@@ -51,7 +54,12 @@ SearchCriteriaGroup::SearchCriteriaGroup( int x, int y, int w )
     _pOpenCalendarBtn->box( FL_FLAT_BOX );
     _pOpenCalendarBtn->down_box( FL_DOWN_BOX );
     _pOpenCalendarBtn->callback( onShowCalendarStatic, this );
+    
+    int w_rest = w - (_pOpenCalendarBtn->x() + _pOpenCalendarBtn->w() );
+    Fl_Box *pBox = new Fl_Box( _pOpenCalendarBtn->x() + _pOpenCalendarBtn->w(),
+                               _pOpenCalendarBtn->y(), w_rest, _pOpenCalendarBtn->h() );
     end();
+    resizable( pBox );
 }
 
 void SearchCriteriaGroup::onShowCalendar() {

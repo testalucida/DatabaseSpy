@@ -33,6 +33,8 @@
         </group>
         <group>
             <file>file:/home/max/cpp/fltk/DatabaseSpy/src/main.cpp</file>
+            <file>file:/home/max/cpp/fltk/DatabaseSpy/src/events.h</file>
+            <file>file:/home/max/cpp/fltk/DatabaseSpy/src/callbacks.h</file>
         </group>
     </open-files>
 </project-private>

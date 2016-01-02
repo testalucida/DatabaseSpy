@@ -5,10 +5,16 @@
                    displayName="Source Files"
                    projectFiles="true">
       <logicalFolder name="src" displayName="src" projectFiles="true">
+        <itemPath>/home/max/cpp/fltk/DatabaseSpy/src/Controller.cpp</itemPath>
+        <itemPath>/home/max/cpp/fltk/DatabaseSpy/src/Controller.h</itemPath>
+        <itemPath>/home/max/cpp/fltk/DatabaseSpy/src/ResultGroup.cpp</itemPath>
+        <itemPath>/home/max/cpp/fltk/DatabaseSpy/src/ResultGroup.h</itemPath>
         <itemPath>/home/max/cpp/fltk/DatabaseSpy/src/SearchCriteriaGroup.cpp</itemPath>
         <itemPath>/home/max/cpp/fltk/DatabaseSpy/src/SearchCriteriaGroup.h</itemPath>
         <itemPath>/home/max/cpp/fltk/DatabaseSpy/src/ToolBarGroup.cpp</itemPath>
         <itemPath>/home/max/cpp/fltk/DatabaseSpy/src/ToolBarGroup.h</itemPath>
+        <itemPath>/home/max/cpp/fltk/DatabaseSpy/src/callbacks.h</itemPath>
+        <itemPath>/home/max/cpp/fltk/DatabaseSpy/src/events.h</itemPath>
         <itemPath>/home/max/cpp/fltk/DatabaseSpy/src/main.cpp</itemPath>
       </logicalFolder>
     </logicalFolder>
@@ -64,6 +70,26 @@
           <commandLine>`fltk-config --use-images --ldstaticflags` `mysql_config --libs`</commandLine>
         </linkerTool>
       </compileType>
+      <item path="/home/max/cpp/fltk/DatabaseSpy/src/Controller.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="/home/max/cpp/fltk/DatabaseSpy/src/Controller.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="/home/max/cpp/fltk/DatabaseSpy/src/ResultGroup.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="/home/max/cpp/fltk/DatabaseSpy/src/ResultGroup.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
       <item path="/home/max/cpp/fltk/DatabaseSpy/src/SearchCriteriaGroup.cpp"
             ex="false"
             tool="1"
@@ -80,6 +106,16 @@
             flavor2="0">
       </item>
       <item path="/home/max/cpp/fltk/DatabaseSpy/src/ToolBarGroup.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="/home/max/cpp/fltk/DatabaseSpy/src/callbacks.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="/home/max/cpp/fltk/DatabaseSpy/src/events.h"
             ex="false"
             tool="3"
             flavor2="0">
@@ -127,6 +163,26 @@
           <commandLine>`fltk-config --use-images --ldstaticflags` `mysql_config --libs`</commandLine>
         </linkerTool>
       </compileType>
+      <item path="/home/max/cpp/fltk/DatabaseSpy/src/Controller.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="/home/max/cpp/fltk/DatabaseSpy/src/Controller.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="/home/max/cpp/fltk/DatabaseSpy/src/ResultGroup.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="/home/max/cpp/fltk/DatabaseSpy/src/ResultGroup.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
       <item path="/home/max/cpp/fltk/DatabaseSpy/src/SearchCriteriaGroup.cpp"
             ex="false"
             tool="1"
@@ -143,6 +199,16 @@
             flavor2="0">
       </item>
       <item path="/home/max/cpp/fltk/DatabaseSpy/src/ToolBarGroup.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="/home/max/cpp/fltk/DatabaseSpy/src/callbacks.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="/home/max/cpp/fltk/DatabaseSpy/src/events.h"
             ex="false"
             tool="3"
             flavor2="0">

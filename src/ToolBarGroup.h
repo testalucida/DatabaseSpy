@@ -15,19 +15,29 @@
 #define TOOLBARGROUP_H
 
 #include <FL/Fl_Group.H>
+#include "events.h"
+#include "callbacks.h"
 
 class Fl_Button;
+
+
 
 class ToolBarGroup : public Fl_Group {
 public:
     ToolBarGroup( int x, int y, int w, Fl_Color color );
     static int getPreferredHeight() { return 40; }
-    
+    void callback( ToolBarCallback, void * );
 private:
     Fl_Button* createButton( int x, const char **xpm, const char **xpm_deact, const char *tooltip );
+    static void staticOnAction( Fl_Widget *, void * );
+    void onAction( Fl_Button * );
 private:
+    ToolBarCallback _callback;
+    void *_pUserData;
     Fl_Button *_pStartBtn;
     Fl_Button *_pTransBtn;
+    Fl_Button *_pFilterBtn;
+    
 };
 
 #endif /* TOOLBARGROUP_H */

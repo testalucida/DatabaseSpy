@@ -7,15 +7,11 @@
 #include <FL/Enumerations.H>
 #include <FL/Fl_Tile.H>
 #include <FL/Fl_Tabs.H>
-#include <FL/Fl_Image.H>
-#include <FL/Fl_XPM_Image.H>
-#include <FL/Fl_Pixmap.H>
-
-#include <vector>
-#include <algorithm>
 
 #include "SearchCriteriaGroup.h"
 #include "ToolBarGroup.h"
+#include "ResultGroup.h"
+#include "Controller.h"
 
 using namespace std;
 
@@ -44,6 +40,12 @@ int main( ) {
     ////////// Recherche-Kriterien 
     SearchCriteriaGroup *pSearch = new SearchCriteriaGroup( 0+1, pToolBar->h(), W-2 );
     
+    ////////// Ergebnis der Suche
+    int yrg = pSearch->y() + pSearch->h();
+    int hrg = H - yrg - H_STATUSBAR;
+    ResultGroup *pResult = new ResultGroup( pSearch->x(), yrg, pSearch->w(), hrg );
+    pResult->color( MYBACKCOLOR );
+    
     ///////// StatusBar
     Fl_Group *pStatusBar = new Fl_Group( 0, win->h()-H_STATUSBAR, W, H_STATUSBAR );
     pStatusBar->box( FL_FLAT_BOX );
@@ -53,7 +55,12 @@ int main( ) {
     pStatusBar->end();
     
     win->end( );
-   
+    win->resizable( pResult );
+    
+      
+    /////////// Controller
+    Controller *pCtrl = new Controller( *pToolBar, *pSearch, *pResult );
+    pCtrl->init();
 
     win->show( );
 

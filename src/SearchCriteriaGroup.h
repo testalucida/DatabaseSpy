@@ -29,6 +29,7 @@ class SearchCriteriaGroup : public Fl_Group {
 public:
     SearchCriteriaGroup( int x, int y, int w );
     static int getPreferredWidth() { return 850; }
+private:
     static void onShowCalendarStatic( Fl_Widget*, void * );
     void onShowCalendar();
 private:
