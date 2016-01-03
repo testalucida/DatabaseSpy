@@ -28,6 +28,9 @@ public:
     void init();
     static void staticToolbarCallback( Event e, void *pUserData );
     void toolbarCallback( Event e );
+    
+    static void staticResultGroupCallback( std::vector<ResultSelectionParms>, void * );
+    void resultGroupCallback( const std::vector<ResultSelectionParms> & );
 private:
     ToolBarGroup&_toolBar;
     SearchCriteriaGroup& _searchCriteria; 

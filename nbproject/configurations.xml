@@ -15,6 +15,8 @@
         <itemPath>/home/max/cpp/fltk/DatabaseSpy/src/ResultGroup.h</itemPath>
         <itemPath>/home/max/cpp/fltk/DatabaseSpy/src/SearchCriteriaGroup.cpp</itemPath>
         <itemPath>/home/max/cpp/fltk/DatabaseSpy/src/SearchCriteriaGroup.h</itemPath>
+        <itemPath>/home/max/cpp/fltk/DatabaseSpy/src/SimpleTable.cpp</itemPath>
+        <itemPath>/home/max/cpp/fltk/DatabaseSpy/src/SimpleTable.h</itemPath>
         <itemPath>/home/max/cpp/fltk/DatabaseSpy/src/ToolBarGroup.cpp</itemPath>
         <itemPath>/home/max/cpp/fltk/DatabaseSpy/src/ToolBarGroup.h</itemPath>
         <itemPath>/home/max/cpp/fltk/DatabaseSpy/src/callbacks.h</itemPath>
@@ -110,6 +112,16 @@
             flavor2="0">
       </item>
       <item path="/home/max/cpp/fltk/DatabaseSpy/src/SearchCriteriaModel.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="/home/max/cpp/fltk/DatabaseSpy/src/SimpleTable.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="/home/max/cpp/fltk/DatabaseSpy/src/SimpleTable.h"
             ex="false"
             tool="3"
             flavor2="0">
@@ -213,6 +225,16 @@
             flavor2="0">
       </item>
       <item path="/home/max/cpp/fltk/DatabaseSpy/src/SearchCriteriaModel.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="/home/max/cpp/fltk/DatabaseSpy/src/SimpleTable.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="/home/max/cpp/fltk/DatabaseSpy/src/SimpleTable.h"
             ex="false"
             tool="3"
             flavor2="0">

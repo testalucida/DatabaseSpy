@@ -26,6 +26,8 @@ using namespace std;
 
 ResultGroup::ResultGroup( int x, int y, int w, int h ) 
 : Fl_Group( x, y, w, h )
+, _callback( 0 )
+, _pUserData( NULL )
 {
     int W_HEADER = 300, W_DATA = w - W_HEADER;
     if( W_DATA <= 0 ) {
@@ -36,7 +38,9 @@ ResultGroup::ResultGroup( int x, int y, int w, int h )
     box( FL_DOWN_BOX );
     Fl_Tile *pTile = new Fl_Tile( x, y, w, h );
     _pHeaderTbl = new Flx_Table( x, y, W_HEADER, h );
+    _pHeaderTbl->signalSelected.connect< ResultGroup, &ResultGroup::onRowSelection >( this );
     _pDataTbl = new Flx_Table( x + W_HEADER, y, W_DATA, h );
+    _pDataTbl->signalSelected.connect< ResultGroup, &ResultGroup::onRowSelection >( this );
     pTile->end();
 }
 
@@ -61,6 +65,31 @@ void ResultGroup::setResult( shared_ptr<my::TableData> result ) {
     _pDataTbl->setTableData( result );
     for( int c = 0; c < 4; c++ ) {
         _pDataTbl->setColumnWidthRelative( c, 0 );
+    }
+}
+
+void ResultGroup::setFilter( bool filter ) {
+    
+}
+
+void ResultGroup::callback( ResultGroupCallback cb, void *pUserData )  {
+    _callback = cb;
+    _pUserData = pUserData;
+}
+
+void ResultGroup::onRowSelection( flx::Flx_Table &t, flx::SelectionEvent &se ) {
+    const vector<int> &rows = t.getSelectedRows();
+    
+    vector<ResultSelectionParms> v;
+    for_each( rows.begin(), rows.end(), [&]( int r ) {
+        ResultSelectionParms parm;
+        parm.row = r;
+        //TODO: parm.ibmsnap_commitseq = ??????
+        v.push_back( parm );
+    });
+    
+    if( _callback != 0 ) {
+        (_callback)( v, _pUserData );
     }
 }
 

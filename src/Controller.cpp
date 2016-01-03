@@ -22,6 +22,7 @@ Controller::Controller( ToolBarGroup &tb, SearchCriteriaGroup &sc, ResultGroup &
 , _result( rg )
 {
     _toolBar.callback( staticToolbarCallback, this );
+    _result.callback( staticResultGroupCallback, this );
 }
 
 void Controller::init() {
@@ -51,6 +52,7 @@ void Controller::toolbarCallback( Event e ) {
         case EVT_START_SEARCH:
             //mit den eingestellten Werten in der Datenbank suchen:
             
+            _toolBar.activate( EVT_FILTER_ON, true );
             break;
         case EVT_TRANS_DETAILS:
             //mit der Commitsequence, die in der Result-Tabelle selektiert ist,
@@ -73,6 +75,14 @@ void Controller::toolbarCallback( Event e ) {
 
 void Controller::staticToolbarCallback( Event e, void *pThis ) {
     ((Controller*)pThis)->toolbarCallback( e );
+}
+
+void Controller::resultGroupCallback( const vector<ResultSelectionParms> &parms ) {
+    
+}
+
+void Controller::staticResultGroupCallback( vector<ResultSelectionParms> parms, void *pThis ) {
+    ((Controller*)pThis)->resultGroupCallback( parms );
 }
 
 
